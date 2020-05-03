@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: home
 title: Home
 subtitle:
 permalink: index
 ---
-# Welcome to my Personal Website.
+# This is the safest place right now.
+
+![useful image]({{ site.url }}/images/stay-home.png)
