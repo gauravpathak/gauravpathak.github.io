@@ -12,7 +12,10 @@
             {%- endif -%}
             </li>
             {%- if site.email -%}
-            <li>Send Email to: <a class="u-email" href="mailto:{{ site.email }}">{{ "Gaurav Pathak" }}</a></li>
+            <li>Send Email: <a class="u-email" href="mailto:{{ site.email }}">{{ "Gaurav Pathak" }}</a></li>
+            {%- endif -%}
+			{%- if site.stackoverflow -%}
+            <li>Stack overflow: <a href="{{ site.stackoverflow }}">{{ "Gaurav Pathak" }}</a></li>
             {%- endif -%}
         </ul>
       </div>
