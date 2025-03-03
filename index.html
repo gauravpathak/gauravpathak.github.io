@@ -2,76 +2,24 @@
 layout: home
 title:
 subtitle:
-permalink: index
 ---
-<head>
-<style>
-div.ex1 {
-  margin-left: -350px;
-  margin-right: -300px;
-  text-align:center;
-}
-.column {
-	-moz-column-count: 2; /* For FireFox */
-	-webkit-column-count: 2; /* For Safari/Chrome */
-	column-count: 2; /* For when the standard gets fully supported */
-    margin-left: -200px;
-	margin-right: -400px;
-	padding-right: none;
-}
-</style>
-</head>
+  {%- if site.posts.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
 
-<font size="6px"><p align=center>Hello, I am Gaurav Pathak.</p></font>
-<font size="5px">
-<p align=center>
-Thank you for taking the time to visit.
-</p>
-<div class="ex1">
-I specialize in Embedded Software Design and Development.
-My experience and know-how in the Embedded Software field is a bit wider with satisfactory abilities.
-<br>
-I started my career in academia and provided training to fresh engineering graduates on Embedded Software Development
-as per the syllabus prescribed by the organization.
-<br>
-Throughout my career, to date, I have worked on a variety of projects and have a well-rounded experience.
-<br>Somewhere, sometime while working on different projects in my carrer I have used the following listed skills and tools:
-</div>
-<br>
-<body>
-<div class="column">
-<ul>
-  <li>Python</li>
-  <li>Linux User Level Programming</li>
-  <li>Linux IPC Techniques such as</li>
-	<ul>
-	<li>Signals</li>
-  	<li>Network Sockets</li>
-	<li>SysV Shared memory</li>
-	<li>SysV Message Queues</li>
-	</ul>
-</ul>
-<ul>
-  <li>Buildroot</li>
-  <li>Yocto</li>
-  <li>JTAG Debugger for debugging and diagnosis</li>
-  <li>Cmocka (Unit Testing Framework for C)</li>
-  <li>Eagle and Proteus Design Suite for PCB Layout</li>
-  <li>Eclipse IDE for C/C++ Developers</li>
-  <li>Cross Compilers</li>
-</ul>
-</div>
-</body>
-<div class="ex1">
-I am acquainted with the process of up-streaming Linux Kernel patches to the mainline,
-having submitted basic cleanup patches to the Linux kernel development community.
-I have learned a lot from the <a href="http://eudyptula-challenge.org/" target="_blank">eudyptula-challenge</a>.
-<br><br>
-Apart from Embedded Software Design and Development, I have primitive knowledge and skills for 
-deploying and hosting open source team chat server and video conferencing server in premise and on AWS.
-<br>
-I deployed <a href="https://matrix.org/docs/projects/server/synapse" target="_blank">Matrix.org homeserver</a>
-for team chat and <a href="https://jitsi.org/jitsi-meet/" target="_blank">Jitsi-Meet</a> for video conferencing on AWS EC-2 instances
-for one of my past employers.
-</div>
+  {%- endif -%}
 
