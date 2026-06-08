@@ -67,12 +67,6 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    thread_safe (0.3.6)
-    tzinfo (1.2.11)
-      thread_safe (~> 0.1)
-    tzinfo-data (1.2026.2)
-      tzinfo (>= 1.0.0)
-    wdm (0.1.1)
     webrick (1.9.2)
 
 PLATFORMS
@@ -95,4 +89,4 @@ DEPENDENCIES
   webrick (~> 1.9)
 
 BUNDLED WITH
-   2.6.7
+  4.0.13
