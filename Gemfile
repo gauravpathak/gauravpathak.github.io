@@ -31,3 +31,7 @@ gem "ffi", "<= 1.16.3"
 
 gem "webrick", "~> 1.9"
 gem "kramdown-parser-gfm"
+gem "csv"
+gem "base64"
+gem "logger"
+gem "bigdecimal"
